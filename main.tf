@@ -167,8 +167,8 @@ data "aws_iam_instance_profile" "default" {
 }
 
 module "autoscale_group" {
-  source  = "cloudposse/ec2-autoscale-group/aws"
-  version = "0.7.2"
+
+  source = "github.com/SkywardIO/terraform-aws-ec2-autoscale-group.git?ref=feature/update_label_module"
 
   enabled    = local.enabled
   namespace  = module.this.namespace
