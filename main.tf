@@ -168,7 +168,7 @@ data "aws_iam_instance_profile" "default" {
 
 module "autoscale_group" {
 
-  source = "github.com/SkywardIO/terraform-aws-ec2-autoscale-group.git?ref=feature/update_label_module"
+  source = "git::https://github.com/SkywardIO/terraform-aws-ec2-autoscale-group.git?ref=feature/update_label_module"
 
   enabled    = local.enabled
   namespace  = module.this.namespace
